@@ -3,11 +3,7 @@ const cityInput = document.getElementById('city-input')
 const apiKey = '647f0516a1695a8f5d4ad6b936f6d301'
 
 async function getWeather() {
-    const getCoord = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityInput.value}&appid=${apiKey}`)
-
-    console.log(getCoord.status)
-    console.log(getCoord.statusText)
-    console.log(getCoord.ok)
+    const getCoord = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityInput.value}&appid=${apiKey}`)
 
     const coord = await getCoord.json()
 
